@@ -1,0 +1,24 @@
+<% @completes.each_slice(3) do |completes| %>
+      <div class='row'>
+         <% completes.each do |complete| %>
+            <div class='card'style="width: 18rem;"> 
+               <%= image_tag complete.list.photo, class: 'card-img-top' %>
+               <div class="card-body">
+                  <h5 class="card-title"><%= complete.list.name %></h5>
+                  <h6 class="card-subtitle mb-2 text-muted"><%= complete.list.description %></h6>
+                  <h6 class="card-subtitle"> <%= complete.listo %> </h6>
+                  <% if complete.listo %>   
+                           <%= button_to "tarea lista", complete_path(complete), class: 'btn btn-success', method: :patch %>                   
+                     <% else %>   
+                           <%= button_to "completar", complete_path(complete), class: 'btn btn-danger', method: :patch %>  
+                     <% end %>                
+               </div>
+            </div>
+         <% end %>
+      </div>
+   <% end %>
+
+
+
+
+

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  listo: false
+  user: one
+  list: one
+
+two:
+  listo: false
+  user: two
+  list: two
